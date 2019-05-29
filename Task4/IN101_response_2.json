@@ -1,0 +1,51 @@
+{
+    "article_list": [
+        {
+            "article_id": "6",
+            "title": "fffff",
+            "information_type": "1",
+            "publish_at": "2019-05-01 00:00:00",
+            "main_image": "http://7nm/image6.jpg",
+            "width": "240",
+            "height": "120"
+        },
+        {
+            "article_id": "2",
+            "title": "bbbbb",
+            "information_type": "1",
+            "publish_at": "2018-10-03 00:00:00",
+            "main_image": "http://7nm/image2.jpg",
+            "width": "100",
+            "height": "80"
+        },
+        {
+            "article_id": "4",
+            "title": "ddddd",
+            "information_type": "2",
+            "publish_at": "2018-10-03 00:00:00",
+            "main_image": "http://7nm/image4.jpg",
+            "width": "50",
+            "height": "70"
+        },
+        {
+            "article_id": "8",
+            "title": "hhhhh",
+            "information_type": "1",
+            "publish_at": "2019-05-01 00:00:00",
+            "main_image": "http://7nm/image8.jpg",
+            "width": "240",
+            "height": "120"
+        },
+        {
+            "article_id": "10",
+            "title": "jjjjj",
+            "information_type": "1",
+            "publish_at": "2019-05-01 00:00:00",
+            "main_image": "http://7nm/image10.jpg",
+            "width": "300",
+            "height": "400"
+        }
+    ],
+    "result": true,
+    "status_code": 0
+}
