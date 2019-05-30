@@ -30,7 +30,7 @@ class CouponTableViewCell: UITableViewCell {
         button.setTitle("ACCEPT", for: .normal)
         button.setTitleColor(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), for: .normal)
         button.contentHorizontalAlignment = .center
-        button.backgroundColor = .yellow
+        button.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         button.layer.cornerRadius = 15
         return button
     }()
@@ -53,10 +53,10 @@ class CouponTableViewCell: UITableViewCell {
         buttonAlertInfo.addTarget(self, action: #selector(buttonInfoAlertTapped), for: .touchUpInside)
     }
     @objc func buttonInfoAlertTapped() {
-        let alert = UIAlertController(title: "Info", message: "SomeInfo need to be display here SomeInfo need to be display here SomeInfo need to be display here", preferredStyle: .alert)
-        let buttonOK = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(buttonOK)
-        delegate.present(alert, animated: true, completion: nil)
+        let vc = AlertViewController()
+        vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        delegate.present(vc, animated: true, completion: nil)
     }
     func setupImageCoupon() {
         addSubview(imageCoupon)
@@ -76,6 +76,7 @@ class CouponTableViewCell: UITableViewCell {
         buttonAccept.addTarget(self, action: #selector(buttonAcceptTapped), for: .touchUpInside)
     }
     @objc func buttonAcceptTapped() {
+        
         let alert = UIAlertController(title: "Confirm", message: "Do you confirm?", preferredStyle: .alert)
         let buttonAlertOK = UIAlertAction(title: "OK", style: .default, handler: nil)
         let buttonAlertCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -83,7 +84,6 @@ class CouponTableViewCell: UITableViewCell {
         alert.addAction(buttonAlertCancel)
         delegate.present(alert, animated: true, completion: nil)
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

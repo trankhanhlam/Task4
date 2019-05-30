@@ -27,10 +27,12 @@
 		10145B1A229D3DDD00A7A7C4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10145B19229D3DDD00A7A7C4 /* ErrorView.swift */; };
 		10145B20229D41A200A7A7C4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10145B1F229D41A200A7A7C4 /* WebViewController.swift */; };
 		103257F7229E21A8005FF8D5 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103257F6229E21A8005FF8D5 /* SafariViewController.swift */; };
+		10F42AEE229F86F900633126 /* EmptyCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F42AED229F86F900633126 /* EmptyCouponViewController.swift */; };
 		10FD7085229E354000AD7941 /* CouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD7084229E354000AD7941 /* CouponViewController.swift */; };
 		10FD7087229E3BAE00AD7941 /* CouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD7086229E3BAE00AD7941 /* CouponCollectionViewCell.swift */; };
 		10FD7089229E482000AD7941 /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD7088229E482000AD7941 /* CouponTableViewCell.swift */; };
 		10FD708B229E86AA00AD7941 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD708A229E86AA00AD7941 /* BaseViewController.swift */; };
+		10FD708F229E926900AD7941 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FD708E229E926900AD7941 /* AlertViewController.swift */; };
 		ECE78F35EE7CDAFC3BD89783 /* Pods_Task4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00BC93ED2183A69BECE37A0 /* Pods_Task4.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,10 +59,12 @@
 		10145B19229D3DDD00A7A7C4 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		10145B1F229D41A200A7A7C4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		103257F6229E21A8005FF8D5 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		10F42AED229F86F900633126 /* EmptyCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCouponViewController.swift; sourceTree = "<group>"; };
 		10FD7084229E354000AD7941 /* CouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewController.swift; sourceTree = "<group>"; };
 		10FD7086229E3BAE00AD7941 /* CouponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FD7088229E482000AD7941 /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
 		10FD708A229E86AA00AD7941 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		10FD708E229E926900AD7941 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		22B3715C7A67A52268BF7540 /* Pods-Task4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task4.debug.xcconfig"; path = "Target Support Files/Pods-Task4/Pods-Task4.debug.xcconfig"; sourceTree = "<group>"; };
 		3F950CE87C7EE579D131465A /* Pods-Task4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task4.release.xcconfig"; path = "Target Support Files/Pods-Task4/Pods-Task4.release.xcconfig"; sourceTree = "<group>"; };
 		E00BC93ED2183A69BECE37A0 /* Pods_Task4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,7 @@
 		10145AE0229CEB5200A7A7C4 /* Task4 */ = {
 			isa = PBXGroup;
 			children = (
+				10FD7090229E926E00AD7941 /* Alert */,
 				10FD708C229E86C300AD7941 /* Base */,
 				10FD7083229E352E00AD7941 /* CouponView */,
 				103257F5229E2191005FF8D5 /* Safari */,
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				10FD7084229E354000AD7941 /* CouponViewController.swift */,
+				10F42AED229F86F900633126 /* EmptyCouponViewController.swift */,
 				10FD7086229E3BAE00AD7941 /* CouponCollectionViewCell.swift */,
 				10FD7088229E482000AD7941 /* CouponTableViewCell.swift */,
 			);
@@ -198,6 +204,14 @@
 				10145B09229D3A7300A7A7C4 /* LoginNeededViewController.swift */,
 			);
 			path = NotLoginView;
+			sourceTree = "<group>";
+		};
+		10FD7090229E926E00AD7941 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				10FD708E229E926900AD7941 /* AlertViewController.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		6A1A237227033310B1F6CB33 /* Pods */ = {
@@ -341,6 +355,8 @@
 				10145AF8229CECAC00A7A7C4 /* DetailsTopicFromNotification.swift in Sources */,
 				10FD708B229E86AA00AD7941 /* BaseViewController.swift in Sources */,
 				10145B06229D177000A7A7C4 /* Article.swift in Sources */,
+				10F42AEE229F86F900633126 /* EmptyCouponViewController.swift in Sources */,
+				10FD708F229E926900AD7941 /* AlertViewController.swift in Sources */,
 				10145B08229D18EE00A7A7C4 /* Helper.swift in Sources */,
 				10145AFA229CEF2D00A7A7C4 /* HomeTableViewCell.swift in Sources */,
 				10145AFC229D0ADC00A7A7C4 /* NotificationViewController.swift in Sources */,

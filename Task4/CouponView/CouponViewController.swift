@@ -8,7 +8,40 @@
 
 import UIKit
 
+class SuperColor {
+    var title: String
+    var color: [Color]?
+    init(title: String, color: [Color]? = []) {
+        self.title = title
+        self.color = color
+    }
+}
+class Color {
+    var nameColor: String
+    var color: UIColor
+    var alertTitle: String
+    init(nameColor: String, color: UIColor,alertTitle: String) {
+        self.nameColor = nameColor
+        self.color = color
+        self.alertTitle = alertTitle
+    }
+}
 class CouponViewController: BaseViewController {
+    var listSuperColor : [SuperColor] = [SuperColor(title: "First",
+                                                    color: [Color(nameColor: "Black", color: .black,alertTitle: "Something about Black"),
+                                                    Color(nameColor: "Green", color: .green,alertTitle: "Something about Green"),
+                                                    Color(nameColor: "Blue", color: .blue,alertTitle: "Something about Blue"),
+                                                    Color(nameColor: "Yellow", color: .yellow,alertTitle: "Something about Yellow")]),
+                                         SuperColor(title: "Second",
+                                                    color: [Color(nameColor: "Black", color: .green,alertTitle: "Something about Black"),
+                                                    Color(nameColor: "Green", color: .black,alertTitle: "Something about Green"),
+                                                    Color(nameColor: "Blue", color: .blue,alertTitle: "Something about Blue")]),
+                                         SuperColor(title: "Third",
+                                                    color: [Color(nameColor: "Black", color: .blue,alertTitle: "Something about Black"),
+                                                    Color(nameColor: "Green", color: .black,alertTitle: "Something about Green")]),
+                                         SuperColor(title: "Fourth")]
+    
+    var listColorForTableView: [Color] = []
     var collectionView: UICollectionView!
     var tableView: UITableView!
     override func viewDidLoad() {
@@ -55,24 +88,43 @@ class CouponViewController: BaseViewController {
 }
 extension CouponViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return listSuperColor.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CouponCollectionViewCell
+        cell.couponLabel.text = listSuperColor[indexPath.row].title
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 90, height: 50)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        listColorForTableView.removeAll()
+        listColorForTableView = listSuperColor[indexPath.row].color!
+        if listColorForTableView.isEmpty == true {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            tableView.addSubview(label)
+            label.textAlignment = .center
+            label.text = "Error"
+            
+            label.centerXAnchor.constraint(equalTo: tableView.centerXAnchor).isActive = true
+            label.centerYAnchor.constraint(equalTo: tableView.centerYAnchor).isActive = true
+            label.widthAnchor.constraint(equalToConstant: 150).isActive = true
+            label.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        }
+        self.tableView.reloadData()
+    }
     
 }
 extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return listColorForTableView.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CouponTableViewCell()
-        cell.backgroundColor = .red
+        cell.backgroundColor = listColorForTableView[indexPath.row].color
+        
         cell.delegate = self
         return cell
     }
